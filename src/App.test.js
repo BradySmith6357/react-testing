@@ -39,7 +39,7 @@ test('button starts enabled and checkbox is unchecked', () => {
 test('checkbox disables and enables button', () => {
   render(<App />);
   const colorButton = screen.getByRole('button', { name : 'Change to blue'});
-  const checkbox = screen.getByRole('checkbox');
+  const checkbox = screen.getByRole('checkbox', { name : 'Disable button'});
 
   fireEvent.click(checkbox);
 
